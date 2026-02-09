@@ -16,6 +16,7 @@ h1 {
   gap: 15px;
 }
 
+/* Post genérico */
 .post {
   display: block;
   position: relative;
@@ -35,4 +36,28 @@ h1 {
 .post:hover img,
 .post:hover video {
   transform: scale(1.05);
+}
+
+/* Post de vídeo com botão */
+.video-post {
+  position: relative;
+}
+
+.video-button {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff0055;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: none;
+  z-index: 10;
+}
+
+.video-button:hover {
+  background: #e6004c;
 }

@@ -1,11 +1,11 @@
-// Dá play automático no vídeo ao passar o mouse
-document.querySelectorAll("video").forEach(video => {
-  video.addEventListener("mouseenter", () => {
-    video.play();
+document.querySelectorAll(".video-post video").forEach(video => {
+  const button = video.parentElement.querySelector(".video-button");
+
+  video.addEventListener("ended", () => {
+    button.style.display = "block";
   });
 
-  video.addEventListener("mouseleave", () => {
-    video.pause();
-    video.currentTime = 0;
+  video.addEventListener("play", () => {
+    button.style.display = "none";
   });
 });
